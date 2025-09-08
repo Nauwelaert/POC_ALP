@@ -1,0 +1,35 @@
+{
+    "name": "pocthomas",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "cftarget": "cf target -o \"flexso-build-demo\" -s \"maxeda poc\"",
+        "cflogin": "cf login -a https://api.cf.eu10-004.hana.ondemand.com/ --sso",
+        "build": "mbt build",
+        "build:mta": "run-s initialfolders && mbt build --mtar=datareports.mtar -m=verbose -j=8",
+        "deploy": "cf deploy mta_archives/datareports.mtar",
+        "deploy:ui": "cf deploy mta_archives/datareports.mtar -m maxeda_ui5_deployer",
+        "deploy:srv": "cf deploy mta_archives/datareports.mtar -m srv",
+        "undeploy": "cf undeploy datareports --delete-services --delete-service-keys",
+        "release": "npm run build && npm run deploy",
+        "build:service": "npm run build --prefix ./srv",
+        "initialfolders": "node ./.initialfolders.js",
+        "build:ui": "npm run build --prefix ./ui ",
+        "cflogin:maxeda:dev": "cf login -a https://api.cf.eu30.hana.ondemand.com/ --sso",
+        "cftarget:maxedev": "cf target -o \"Maxeda DIY B.V._maxeda-bwz-dev\" -s \"BWZ_dev\"",
+
+        "srv:local": "npm run dev --prefix ./srv",
+        "approuter:local": "npm run local --prefix ./localapprouter"
+    },
+    "devDependencies": {
+        "@ui5/cli": "^3.11.0",
+        "copyfiles": "2.4.1",
+        "npm-run-all": "^4.1.5",
+        "typescript": "~5.2.2"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

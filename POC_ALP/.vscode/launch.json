@@ -1,0 +1,311 @@
+{
+  "configurations": [
+
+  
+    
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Start approuter locally",
+      "command": "cds bind --exec -- npm run approuter:local",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    },
+
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Start middleware locally",
+      "command": "cds bind --exec -- npm run srv:local",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    },
+
+
+    {
+      "type": "node",
+      "name": "Start UI Local",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run"
+      ],
+      "args": [
+        "start-local"
+      ],
+      "cwd": "${workspaceFolder}/ui/fiorielements/",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "envFile": "${workspaceFolder}/.env/local.env",
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    },
+    {
+      "type": "node",
+      "name": "Start UI 3AM_POS_01",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run"
+      ],
+      "args": [
+        "start-local"
+      ],
+      "cwd": "${workspaceFolder}/ui/3AM_POS_01/",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "envFile": "${workspaceFolder}/.env/local.env",
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    }, {
+      "type": "node",
+      "name": "Start UI 3AM_POS_01_POS_SPACE",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run"
+      ],
+      "args": [
+        "start-local"
+      ],
+      "cwd": "${workspaceFolder}/ui/3AM_POS_01_POS_SPACE/",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "envFile": "${workspaceFolder}/.env/local.env",
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    },
+    {
+      "type": "node",
+      "name": "Start UI 3AM_POS_03",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run"
+      ],
+      "args": [
+        "start-local"
+      ],
+      "cwd": "${workspaceFolder}/ui/3AM_POS_03/",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "envFile": "${workspaceFolder}/.env/local.env",
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    },
+    {
+      "type": "node",
+      "name": "Start UI 3AM_POS_0T",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run"
+      ],
+      "args": [
+        "start-local"
+      ],
+      "cwd": "${workspaceFolder}/ui/3AM_POS_0T/",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "envFile": "${workspaceFolder}/.env/local.env",
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    },
+    {
+      "type": "node",
+      "name": "Start UI 3AM_SOP_02",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run"
+      ],
+      "args": [
+        "start-local"
+      ],
+      "cwd": "${workspaceFolder}/ui/3AM_SOP_02/",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "envFile": "${workspaceFolder}/.env/local.env",
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    },
+    {
+      "type": "node",
+      "name": "Start UI 1VD_SALESORG_01",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run"
+      ],
+      "args": [
+        "start-local"
+      ],
+      "cwd": "${workspaceFolder}/ui/1VD_SALESORG_01/",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "envFile": "${workspaceFolder}/.env/local.env",
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    },
+    {
+      "type": "node",
+      "name": "Start UI 1VD_SALESORG_02",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run"
+      ],
+      "args": [
+        "start-local"
+      ],
+      "cwd": "${workspaceFolder}/ui/1VD_SALESORG_02/",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "envFile": "${workspaceFolder}/.env/local.env",
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    },
+    {
+      "type": "node",
+      "name": "Start UI 3AM_POS_WORKZONE_01",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run"
+      ],
+      "args": [
+        "start-local"
+      ],
+      "cwd": "${workspaceFolder}/ui/3AM_POS_WORKZONE_01/",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "envFile": "${workspaceFolder}/.env/local.env",
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    },
+    {
+      "type": "node",
+      "name": "Start UI 3AM_POS_WORZONE_02",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run"
+      ],
+      "args": [
+        "start-local"
+      ],
+      "cwd": "${workspaceFolder}/ui/3AM_POS_WORZONE_02/",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "local",
+        "NODE_OPTIONS": "--max-old-space-size=2048"
+      },
+      "envFile": "${workspaceFolder}/.env/local.env",
+      "presentation": {
+        "hidden": false,
+        "group": "Server",
+        "order": 1
+      }
+    }
+  ],
+  "compounds": [
+
+  ],
+  "inputs": [
+    {
+      "id": "UI5MinVersionundefined",
+      "type": "command",
+      "command": "sap.ux.appGenerator.ui5Version",
+      "args": {}
+    },
+    {
+      "id": "UI5MinVersion1.84.0",
+      "type": "command",
+      "command": "sap.ux.appGenerator.ui5Version",
+      "args": {
+        "minUI5Version": "1.84.0"
+      }
+    }
+  ],
+  "version": "0.2.0"
+}

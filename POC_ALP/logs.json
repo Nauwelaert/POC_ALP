@@ -1,0 +1,132 @@
+Retrieving logs for app maxeda-approuter in org flexso-build-demo / space maxeda poc as thomas.swolfs@flexso.com...
+
+   2024-08-23T07:59:21.71+0000 [RTR/5] OUT flexso-build-demo-maxeda-poc-maxeda-approuter.cfapps.eu10-004.hana.ondemand.com - [2024-08-23T07:59:21.703663773Z] "GET / HTTP/2.0" 302 0 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" "10.0.72.0:43710" "10.0.201.28:61107" x_forwarded_for:"94.143.189.241, 10.0.72.0" x_forwarded_proto:"https" vcap_request_id:"c640aa3a-e363-462a-453d-469e16b66667" response_time:0.008596 gorouter_time:0.000074 app_id:"4ebabed0-60c8-4e38-b3e8-a16193fa574f" app_index:"0" instance_id:"98511ca0-980a-4b69-54f4-638c" failed_attempts:0 failed_attempts_time:"-" dns_time:0.000000 dial_time:0.001069 tls_time:0.003964 backend_time:0.008522 x_cf_routererror:"-" x_correlationid:"-" tenantid:"-" sap_passport:"-" x_scp_request_id:"e2ed44ff-9e3c-4b97-a9ee-aeb9d9b54259-66C84159-D214971" x_cf_app_instance:"-" x_forwarded_host:"-" x_custom_host:"-" x_ssl_client:"-" x_ssl_client_session_id:"-" x_ssl_client_verify:"-" x_ssl_client_subject_dn:"-" x_ssl_client_subject_cn:"-" x_ssl_client_issuer_dn:"-" x_ssl_client_notbefore:"-" x_ssl_client_notafter:"-" x_cf_forwarded_url:"-" traceparent:"-" true_client_ip:"-" x_request_id:"-" x_b3_traceid:"c640aa3ae363462a453d469e16b66667" x_b3_spanid:"453d469e16b66667" x_b3_parentspanid:"-" b3:"c640aa3ae363462a453d469e16b66667-453d469e16b66667"
+   2024-08-23T07:59:21.95+0000 [APP/PROC/WEB/0] OUT {"written_at":"2024-08-23T07:59:21.952Z","written_ts":1724399961952000000,"csn_component":"-","correlation_id":"c4f041ba-252f-41cc-557b-7ae85a83d735","type":"log","logger":"nodejs-logger","layer":"/Auth/OAuth2","level":"info","container_id":"10.0.201.28","component_type":"application","component_id":"4ebabed0-60c8-4e38-b3e8-a16193fa574f","component_name":"maxeda-approuter","component_instance":-1,"source_instance":-1,"organization_id":"41258d48-046b-45ca-970d-886bc64da50e","organization_name":"flexso-build-demo","space_id":"02daf1b9-f03c-4a04-86b6-06e47187b6d4","space_name":"maxeda poc","request_id":"c4f041ba-252f-41cc-557b-7ae85a83d735","msg":"query does not exist for request url /srv_api/hello"}
+   2024-08-23T07:59:21.95+0000 [APP/PROC/WEB/0] OUT {"written_at":"2024-08-23T07:59:21.952Z","written_ts":1724399961952000000,"csn_component":"-","correlation_id":"c4f041ba-252f-41cc-557b-7ae85a83d735","type":"log","logger":"nodejs-logger","layer":"/Auth/OAuth2","level":"info","container_id":"10.0.201.28","component_type":"application","component_id":"4ebabed0-60c8-4e38-b3e8-a16193fa574f","component_name":"maxeda-approuter","component_instance":-1,"source_instance":-1,"organization_id":"41258d48-046b-45ca-970d-886bc64da50e","organization_name":"flexso-build-demo","space_id":"02daf1b9-f03c-4a04-86b6-06e47187b6d4","space_name":"maxeda poc","request_id":"c4f041ba-252f-41cc-557b-7ae85a83d735","msg":"sending page with client-side redirect to https://flexso-build-demo.authentication.eu10.hana.ondemand.com/oauth/authorize?response_type=code&client_id=sb-maxeda!t451006&redirect_uri=https%3A%2F%2Fflexso-build-demo-maxeda-poc-maxeda-approuter.cfapps.eu10-004.hana.ondemand.com%2Flogin%2Fcallback"}
+   2024-08-23T07:59:21.95+0000 [APP/PROC/WEB/0] OUT {"written_at":"2024-08-23T07:59:21.952Z","written_ts":1724399961952000000,"csn_component":"-","correlation_id":"c4f041ba-252f-41cc-557b-7ae85a83d735","type":"log","logger":"nodejs-logger","layer":"/Auth/OAuth2","level":"info","container_id":"10.0.201.28","component_type":"application","component_id":"4ebabed0-60c8-4e38-b3e8-a16193fa574f","component_name":"maxeda-approuter","component_instance":-1,"source_instance":-1,"organization_id":"41258d48-046b-45ca-970d-886bc64da50e","organization_name":"flexso-build-demo","space_id":"02daf1b9-f03c-4a04-86b6-06e47187b6d4","space_name":"maxeda poc","request_id":"c4f041ba-252f-41cc-557b-7ae85a83d735","msg":"x-forwarded-path header: undefined"}
+   2024-08-23T07:59:21.95+0000 [RTR/2] OUT flexso-build-demo-maxeda-poc-maxeda-approuter.cfapps.eu10-004.hana.ondemand.com - [2024-08-23T07:59:21.753626011Z] "GET /srv_api/hello HTTP/2.0" 200 0 688 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" "10.0.72.0:14668" "10.0.201.28:61107" x_forwarded_for:"94.143.189.241, 10.0.72.0" x_forwarded_proto:"https" vcap_request_id:"c4f041ba-252f-41cc-557b-7ae85a83d735" response_time:0.199716 gorouter_time:0.000061 app_id:"4ebabed0-60c8-4e38-b3e8-a16193fa574f" app_index:"0" instance_id:"98511ca0-980a-4b69-54f4-638c" failed_attempts:0 failed_attempts_time:"-" dns_time:0.000000 dial_time:0.002257 tls_time:0.003558 backend_time:0.199654 x_cf_routererror:"-" x_correlationid:"-" tenantid:"-" sap_passport:"-" x_scp_request_id:"e2ed44ff-9e3c-4b97-a9ee-aeb9d9b54259-66C84159-D214983" x_cf_app_instance:"-" x_forwarded_host:"-" x_custom_host:"-" x_ssl_client:"-" x_ssl_client_session_id:"-" x_ssl_client_verify:"-" x_ssl_client_subject_dn:"-" x_ssl_client_subject_cn:"-" x_ssl_client_issuer_dn:"-" x_ssl_client_notbefore:"-" x_ssl_client_notafter:"-" x_cf_forwarded_url:"-" traceparent:"-" true_client_ip:"-" x_request_id:"-" x_b3_traceid:"c4f041ba252f41cc557b7ae85a83d735" x_b3_spanid:"557b7ae85a83d735" x_b3_parentspanid:"-" b3:"c4f041ba252f41cc557b7ae85a83d735-557b7ae85a83d735"
+   2024-08-23T08:08:06.49+0000 [API/24] OUT Updated app with guid 4ebabed0-60c8-4e38-b3e8-a16193fa574f ({"environment_variables"=>"[PRIVATE DATA HIDDEN]"})
+   2024-08-23T08:08:29.39+0000 [API/0] OUT Uploading app package for app with guid 4ebabed0-60c8-4e38-b3e8-a16193fa574f
+   2024-08-23T08:08:29.58+0000 [API/30] OUT Updated app with guid 4ebabed0-60c8-4e38-b3e8-a16193fa574f ({"environment_variables"=>"[PRIVATE DATA HIDDEN]"})
+   2024-08-23T08:08:37.02+0000 [API/5] OUT Stopping app with guid 4ebabed0-60c8-4e38-b3e8-a16193fa574f
+   2024-08-23T08:08:37.05+0000 [CELL/0] OUT Cell b1ee70ae-afa0-438b-a2a2-963aff0b1c88 stopping instance 98511ca0-980a-4b69-54f4-638c
+   2024-08-23T08:08:37.45+0000 [API/26] OUT Creating build for app with guid 4ebabed0-60c8-4e38-b3e8-a16193fa574f
+   2024-08-23T08:08:38.07+0000 [STG/0] OUT Downloading zero_trust_sidecar_buildpack_1_3...
+   2024-08-23T08:08:38.07+0000 [STG/0] OUT Downloading nodejs_buildpack...
+   2024-08-23T08:08:38.07+0000 [STG/0] OUT Downloading staticfile_buildpack...
+   2024-08-23T08:08:38.07+0000 [STG/0] OUT Downloading java_buildpack...
+   2024-08-23T08:08:38.08+0000 [STG/0] OUT Downloading sap_java_buildpack_1_102...
+   2024-08-23T08:08:38.10+0000 [STG/0] OUT Downloaded nodejs_buildpack
+   2024-08-23T08:08:38.10+0000 [STG/0] OUT Downloading go_buildpack...
+   2024-08-23T08:08:38.11+0000 [STG/0] OUT Downloaded staticfile_buildpack
+   2024-08-23T08:08:38.11+0000 [STG/0] OUT Downloading python_buildpack...
+   2024-08-23T08:08:38.11+0000 [STG/0] OUT Downloaded java_buildpack
+   2024-08-23T08:08:38.11+0000 [STG/0] OUT Downloading php_buildpack...
+   2024-08-23T08:08:38.11+0000 [STG/0] OUT Downloaded zero_trust_sidecar_buildpack_1_3
+   2024-08-23T08:08:38.11+0000 [STG/0] OUT Downloading nginx_buildpack...
+   2024-08-23T08:08:38.12+0000 [STG/0] OUT Downloaded sap_java_buildpack_1_102
+   2024-08-23T08:08:38.12+0000 [STG/0] OUT Downloading sap_java_buildpack_1_99...
+   2024-08-23T08:08:38.12+0000 [STG/0] OUT Downloaded python_buildpack
+   2024-08-23T08:08:38.12+0000 [STG/0] OUT Downloading binary_buildpack...
+   2024-08-23T08:08:38.13+0000 [STG/0] OUT Downloaded go_buildpack
+   2024-08-23T08:08:38.13+0000 [STG/0] OUT Downloading sap_java_buildpack...
+   2024-08-23T08:08:38.13+0000 [STG/0] OUT Downloaded php_buildpack
+   2024-08-23T08:08:38.13+0000 [STG/0] OUT Downloading sap_java_buildpack_jakarta...
+   2024-08-23T08:08:38.14+0000 [STG/0] OUT Downloaded nginx_buildpack
+   2024-08-23T08:08:38.14+0000 [STG/0] OUT Downloading zero_trust_sidecar_buildpack_1_1...
+   2024-08-23T08:08:38.14+0000 [STG/0] OUT Downloaded binary_buildpack
+   2024-08-23T08:08:38.14+0000 [STG/0] OUT Downloading sap_java_buildpack_1_100...
+   2024-08-23T08:08:38.14+0000 [STG/0] OUT Downloaded sap_java_buildpack
+   2024-08-23T08:08:38.14+0000 [STG/0] OUT Downloading sap_java_buildpack_jakarta_2_14...
+   2024-08-23T08:08:38.15+0000 [STG/0] OUT Downloaded sap_java_buildpack_1_99
+   2024-08-23T08:08:38.15+0000 [STG/0] OUT Downloading sap_java_buildpack_jakarta_2_16...
+   2024-08-23T08:08:38.15+0000 [STG/0] OUT Downloaded sap_java_buildpack_jakarta
+   2024-08-23T08:08:38.15+0000 [STG/0] OUT Downloading sap_java_buildpack_jakarta_2_13...
+   2024-08-23T08:08:38.15+0000 [STG/0] OUT Downloaded zero_trust_sidecar_buildpack_1_1
+   2024-08-23T08:08:38.15+0000 [STG/0] OUT Downloading zero_trust_sidecar_buildpack...
+   2024-08-23T08:08:38.16+0000 [STG/0] OUT Downloaded sap_java_buildpack_jakarta_2_14
+   2024-08-23T08:08:38.16+0000 [STG/0] OUT Downloading zero_trust_sidecar_buildpack_1_2...
+   2024-08-23T08:08:38.16+0000 [STG/0] OUT Downloaded sap_java_buildpack_jakarta_2_13
+   2024-08-23T08:08:38.16+0000 [STG/0] OUT Downloaded sap_java_buildpack_jakarta_2_16
+   2024-08-23T08:08:38.17+0000 [STG/0] OUT Downloaded zero_trust_sidecar_buildpack
+   2024-08-23T08:08:38.17+0000 [STG/0] OUT Downloaded sap_java_buildpack_1_100
+   2024-08-23T08:08:38.19+0000 [STG/0] OUT Downloaded zero_trust_sidecar_buildpack_1_2
+   2024-08-23T08:08:38.19+0000 [STG/0] OUT Cell 92246be2-0c7e-458f-b2d3-ffc8ad23076e creating container for instance 6846b510-bec9-4906-b541-89a9b3c6f543
+   2024-08-23T08:08:38.62+0000 [STG/0] OUT Security group rules were updated
+   2024-08-23T08:08:38.68+0000 [STG/0] OUT Cell 92246be2-0c7e-458f-b2d3-ffc8ad23076e successfully created container for instance 6846b510-bec9-4906-b541-89a9b3c6f543
+   2024-08-23T08:08:39.05+0000 [STG/0] OUT Downloading app package...
+   2024-08-23T08:08:39.05+0000 [STG/0] OUT Downloading build artifacts cache...
+   2024-08-23T08:08:39.11+0000 [STG/0] OUT Downloaded build artifacts cache (224B)
+   2024-08-23T08:08:39.97+0000 [STG/0] OUT Downloaded app package (7.6M)
+   2024-08-23T08:08:40.58+0000 [STG/0] OUT -----> Nodejs Buildpack version 1.8.25
+   2024-08-23T08:08:40.88+0000 [STG/0] OUT -----> Bootstrapping python
+   2024-08-23T08:08:40.88+0000 [STG/0] OUT -----> Installing python 3.11.9
+   2024-08-23T08:08:40.88+0000 [STG/0] OUT Copy [/tmp/buildpacks/badd377bdd2a2a0d/dependencies/21946bb90387e2dbfa40b0d6ca474060/python_3.11.9_linux_x64_cflinuxfs4_dea1f79d.tgz]
+   2024-08-23T08:08:44.59+0000 [STG/0] OUT -----> Installing binaries
+   2024-08-23T08:08:44.59+0000 [STG/0] OUT engines.node (package.json): ^16.0.0 || ^18.0.0
+   2024-08-23T08:08:44.59+0000 [STG/0] OUT engines.npm (package.json): unspecified (use default)
+   2024-08-23T08:08:44.59+0000 [STG/0] OUT -----> Installing node 18.20.3
+   2024-08-23T08:08:44.59+0000 [STG/0] OUT Copy [/tmp/buildpacks/badd377bdd2a2a0d/dependencies/19b5c4adf0caa4c7ff380c8ff7c22465/node_18.20.3_linux_x64_cflinuxfs4_d8565231.tgz]
+   2024-08-23T08:08:46.51+0000 [STG/0] OUT Using default npm version: 10.7.0
+   2024-08-23T08:08:46.51+0000 [STG/0] OUT -----> Installing yarn 1.22.19
+   2024-08-23T08:08:46.51+0000 [STG/0] OUT Copy [/tmp/buildpacks/badd377bdd2a2a0d/dependencies/0f06052381cbcef1593bd279ca3d9458/yarn_1.22.19_linux_noarch_any-stack_32d0e82e.tgz]
+   2024-08-23T08:08:46.85+0000 [STG/0] OUT Installed yarn 1.22.19
+   2024-08-23T08:08:46.85+0000 [STG/0] OUT -----> Creating runtime environment
+   2024-08-23T08:08:46.85+0000 [STG/0] OUT NODE_ENV=production
+   2024-08-23T08:08:46.85+0000 [STG/0] OUT NODE_HOME=/tmp/contents2855657533/deps/0/node
+   2024-08-23T08:08:46.85+0000 [STG/0] OUT NODE_MODULES_CACHE=true
+   2024-08-23T08:08:46.85+0000 [STG/0] OUT NODE_VERBOSE=false
+   2024-08-23T08:08:46.85+0000 [STG/0] OUT NPM_CONFIG_LOGLEVEL=error
+   2024-08-23T08:08:46.85+0000 [STG/0] OUT NPM_CONFIG_PRODUCTION=true
+   2024-08-23T08:08:46.85+0000 [STG/0] OUT -----> Building dependencies
+   2024-08-23T08:08:46.85+0000 [STG/0] OUT Prebuild detected (node_modules already exists)
+   2024-08-23T08:08:46.85+0000 [STG/0] OUT Rebuilding any native modules
+   2024-08-23T08:08:47.69+0000 [STG/0] OUT rebuilt dependencies successfully
+   2024-08-23T08:08:47.70+0000 [STG/0] OUT npm notice
+   2024-08-23T08:08:47.70+0000 [STG/0] OUT npm notice New minor version of npm available! 10.7.0 -> 10.8.2
+   2024-08-23T08:08:47.70+0000 [STG/0] OUT npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.2
+   2024-08-23T08:08:47.70+0000 [STG/0] OUT npm notice To update run: npm install -g npm@10.8.2
+   2024-08-23T08:08:47.70+0000 [STG/0] OUT npm notice
+   2024-08-23T08:08:47.71+0000 [STG/0] OUT Installing any new modules (package.json + package-lock.json)
+   2024-08-23T08:08:48.59+0000 [STG/0] OUT up to date in 796ms
+   2024-08-23T08:08:48.59+0000 [STG/0] OUT 15 packages are looking for funding
+   2024-08-23T08:08:48.59+0000 [STG/0] OUT run `npm fund` for details
+   2024-08-23T08:08:49.48+0000 [STG/0] OUT Contrast Security no credentials found. Will not write environment files.
+   2024-08-23T08:08:58.67+0000 [STG/0] OUT Exit status 0
+   2024-08-23T08:08:58.67+0000 [STG/0] OUT Uploading droplet, build artifacts cache...
+   2024-08-23T08:08:58.67+0000 [STG/0] OUT Uploading droplet...
+   2024-08-23T08:08:58.67+0000 [STG/0] OUT Uploading build artifacts cache...
+   2024-08-23T08:08:58.68+0000 [STG/0] OUT Uploaded build artifacts cache (226B)
+   2024-08-23T08:08:59.57+0000 [API/9] OUT Creating droplet for app with guid 4ebabed0-60c8-4e38-b3e8-a16193fa574f
+   2024-08-23T08:09:02.63+0000 [STG/0] OUT Uploaded droplet (50.3M)
+   2024-08-23T08:09:02.64+0000 [STG/0] OUT Uploading complete
+   2024-08-23T08:09:02.97+0000 [STG/0] OUT Cell 92246be2-0c7e-458f-b2d3-ffc8ad23076e stopping instance 6846b510-bec9-4906-b541-89a9b3c6f543
+   2024-08-23T08:09:02.97+0000 [STG/0] OUT Cell 92246be2-0c7e-458f-b2d3-ffc8ad23076e destroying container for instance 6846b510-bec9-4906-b541-89a9b3c6f543
+   2024-08-23T08:09:04.93+0000 [STG/0] OUT Cell 92246be2-0c7e-458f-b2d3-ffc8ad23076e successfully destroyed container for instance 6846b510-bec9-4906-b541-89a9b3c6f543
+   2024-08-23T08:09:07.34+0000 [API/15] OUT Updated app with guid 4ebabed0-60c8-4e38-b3e8-a16193fa574f ({:droplet_guid=>"464dbebb-8521-4fdd-ab81-3a857b5f9509"})
+   2024-08-23T08:09:08.72+0000 [API/22] OUT Creating revision for app with guid 4ebabed0-60c8-4e38-b3e8-a16193fa574f
+   2024-08-23T08:09:08.88+0000 [API/22] OUT Starting app with guid 4ebabed0-60c8-4e38-b3e8-a16193fa574f
+   2024-08-23T08:09:09.21+0000 [CELL/0] OUT Cell 4ec46db4-6c35-4c61-a924-b24ab622b27a creating container for instance 2931514a-4cb8-42f5-4a56-ceeb
+   2024-08-23T08:09:09.77+0000 [CELL/0] OUT Security group rules were updated
+   2024-08-23T08:09:09.83+0000 [CELL/0] OUT Cell 4ec46db4-6c35-4c61-a924-b24ab622b27a successfully created container for instance 2931514a-4cb8-42f5-4a56-ceeb
+   2024-08-23T08:09:10.43+0000 [CELL/0] OUT Downloading droplet...
+   2024-08-23T08:09:13.37+0000 [CELL/0] OUT Downloaded droplet (50.3M)
+   2024-08-23T08:09:13.37+0000 [CELL/0] OUT Starting health monitoring of container
+   2024-08-23T08:09:13.44+0000 [APP/PROC/WEB/0] OUT Invoking pre-start scripts.
+   2024-08-23T08:09:13.64+0000 [APP/PROC/WEB/0] OUT Invoking start command.
+   2024-08-23T08:09:14.06+0000 [APP/PROC/WEB/0] OUT > start
+   2024-08-23T08:09:14.06+0000 [APP/PROC/WEB/0] OUT > node node_modules/@sap/approuter/approuter.js
+   2024-08-23T08:09:14.35+0000 [APP/PROC/WEB/0] OUT {"written_at":"2024-08-23T08:09:14.354Z","written_ts":1724400554354000000,"csn_component":"-","correlation_id":"-","type":"log","logger":"nodejs-logger","layer":"/LoggingLibrary","level":"warning","container_id":"10.0.137.20","component_type":"application","component_id":"4ebabed0-60c8-4e38-b3e8-a16193fa574f","component_name":"maxeda-approuter","component_instance":-1,"source_instance":-1,"organization_id":"41258d48-046b-45ca-970d-886bc64da50e","organization_name":"flexso-build-demo","space_id":"02daf1b9-f03c-4a04-86b6-06e47187b6d4","space_name":"maxeda poc","context_id":"","msg":"Dynamic log level switching not available"}
+   2024-08-23T08:09:14.66+0000 [APP/PROC/WEB/0] OUT {"written_at":"2024-08-23T08:09:14.668Z","written_ts":1724400554668000000,"csn_component":"-","correlation_id":"m06fkfjg","type":"log","logger":"nodejs-logger","layer":"/approuter","level":"info","container_id":"10.0.137.20","component_type":"application","component_id":"4ebabed0-60c8-4e38-b3e8-a16193fa574f","component_name":"maxeda-approuter","component_instance":-1,"source_instance":-1,"organization_id":"41258d48-046b-45ca-970d-886bc64da50e","organization_name":"flexso-build-demo","space_id":"02daf1b9-f03c-4a04-86b6-06e47187b6d4","space_name":"maxeda poc","context_id":"m06fkfjg","msg":"Application router version 14.4.2"}
+   2024-08-23T08:09:14.67+0000 [APP/PROC/WEB/0] OUT {"written_at":"2024-08-23T08:09:14.672Z","written_ts":1724400554672000000,"csn_component":"-","correlation_id":"m06fkfjk","type":"log","logger":"nodejs-logger","layer":"/Configuration","level":"info","container_id":"10.0.137.20","component_type":"application","component_id":"4ebabed0-60c8-4e38-b3e8-a16193fa574f","component_name":"maxeda-approuter","component_instance":-1,"source_instance":-1,"organization_id":"41258d48-046b-45ca-970d-886bc64da50e","organization_name":"flexso-build-demo","space_id":"02daf1b9-f03c-4a04-86b6-06e47187b6d4","space_name":"maxeda poc","context_id":"m06fkfjk","msg":"No COOKIES environment variable"}
+   2024-08-23T08:09:14.73+0000 [APP/PROC/WEB/0] OUT {"written_at":"2024-08-23T08:09:14.737Z","written_ts":1724400554737000000,"csn_component":"-","correlation_id":"m06fkfjg","type":"log","logger":"nodejs-logger","layer":"/approuter","level":"info","container_id":"10.0.137.20","component_type":"application","component_id":"4ebabed0-60c8-4e38-b3e8-a16193fa574f","component_name":"maxeda-approuter","component_instance":-1,"source_instance":-1,"organization_id":"41258d48-046b-45ca-970d-886bc64da50e","organization_name":"flexso-build-demo","space_id":"02daf1b9-f03c-4a04-86b6-06e47187b6d4","space_name":"maxeda poc","context_id":"m06fkfjg","msg":"Application router is listening on port: 8080"}
+   2024-08-23T08:09:16.22+0000 [CELL/0] OUT Container became healthy
+   2024-08-23T08:09:16.26+0000 [API/29] OUT Process became ready with guid 4ebabed0-60c8-4e38-b3e8-a16193fa574f payload: {"instance"=>"2931514a-4cb8-42f5-4a56-ceeb", "index"=>0, "cell_id"=>"4ec46db4-6c35-4c61-a924-b24ab622b27a", "ready"=>true, "version"=>"874f4637-e4f2-4c4b-9db3-8068f990e980"}
+   2024-08-23T08:09:43.35+0000 [CELL/0] OUT Cell b1ee70ae-afa0-438b-a2a2-963aff0b1c88 destroying container for instance 98511ca0-980a-4b69-54f4-638c
+   2024-08-23T08:09:43.56+0000 [PROXY/0] OUT Exit status 137
+   2024-08-23T08:09:45.07+0000 [CELL/0] OUT Cell b1ee70ae-afa0-438b-a2a2-963aff0b1c88 successfully destroyed container for instance 98511ca0-980a-4b69-54f4-638c
+   2024-08-23T08:10:01.06+0000 [RTR/4] OUT flexso-build-demo-maxeda-poc-maxeda-approuter.cfapps.eu10-004.hana.ondemand.com - [2024-08-23T08:10:01.045396176Z] "GET / HTTP/2.0" 302 0 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" "10.0.200.0:18682" "10.0.137.20:61032" x_forwarded_for:"94.143.189.241, 10.0.200.0" x_forwarded_proto:"https" vcap_request_id:"21c8dc95-277f-4f78-7d63-ec328fad4cee" response_time:0.017173 gorouter_time:0.000054 app_id:"4ebabed0-60c8-4e38-b3e8-a16193fa574f" app_index:"0" instance_id:"2931514a-4cb8-42f5-4a56-ceeb" failed_attempts:0 failed_attempts_time:"-" dns_time:0.000000 dial_time:0.001760 tls_time:0.005707 backend_time:0.017120 x_cf_routererror:"-" x_correlationid:"-" tenantid:"-" sap_passport:"-" x_scp_request_id:"ce569055-48ab-4a71-8abd-74c27986dc2e-66C843D8-CC70820" x_cf_app_instance:"-" x_forwarded_host:"-" x_custom_host:"-" x_ssl_client:"-" x_ssl_client_session_id:"-" x_ssl_client_verify:"-" x_ssl_client_subject_dn:"-" x_ssl_client_subject_cn:"-" x_ssl_client_issuer_dn:"-" x_ssl_client_notbefore:"-" x_ssl_client_notafter:"-" x_cf_forwarded_url:"-" traceparent:"-" true_client_ip:"-" x_request_id:"-" x_b3_traceid:"21c8dc95277f4f787d63ec328fad4cee" x_b3_spanid:"7d63ec328fad4cee" x_b3_parentspanid:"-" b3:"21c8dc95277f4f787d63ec328fad4cee-7d63ec328fad4cee"
+   2024-08-23T08:10:01.26+0000 [APP/PROC/WEB/0] OUT {"written_at":"2024-08-23T08:10:01.269Z","written_ts":1724400601269000000,"csn_component":"-","correlation_id":"ee2f72b4-7bef-4827-741a-f5e92e2be845","type":"log","logger":"nodejs-logger","layer":"/Auth/OAuth2","level":"info","container_id":"10.0.137.20","component_type":"application","component_id":"4ebabed0-60c8-4e38-b3e8-a16193fa574f","component_name":"maxeda-approuter","component_instance":-1,"source_instance":-1,"organization_id":"41258d48-046b-45ca-970d-886bc64da50e","organization_name":"flexso-build-demo","space_id":"02daf1b9-f03c-4a04-86b6-06e47187b6d4","space_name":"maxeda poc","request_id":"ee2f72b4-7bef-4827-741a-f5e92e2be845","msg":"query does not exist for request url /srv_api/hello"}
+   2024-08-23T08:10:01.27+0000 [APP/PROC/WEB/0] OUT {"written_at":"2024-08-23T08:10:01.269Z","written_ts":1724400601269000000,"csn_component":"-","correlation_id":"ee2f72b4-7bef-4827-741a-f5e92e2be845","type":"log","logger":"nodejs-logger","layer":"/Auth/OAuth2","level":"info","container_id":"10.0.137.20","component_type":"application","component_id":"4ebabed0-60c8-4e38-b3e8-a16193fa574f","component_name":"maxeda-approuter","component_instance":-1,"source_instance":-1,"organization_id":"41258d48-046b-45ca-970d-886bc64da50e","organization_name":"flexso-build-demo","space_id":"02daf1b9-f03c-4a04-86b6-06e47187b6d4","space_name":"maxeda poc","request_id":"ee2f72b4-7bef-4827-741a-f5e92e2be845","msg":"sending page with client-side redirect to https://flexso-build-demo.authentication.eu10.hana.ondemand.com/oauth/authorize?response_type=code&client_id=sb-maxeda!t451006&redirect_uri=https%3A%2F%2Fflexso-build-demo-maxeda-poc-maxeda-approuter.cfapps.eu10-004.hana.ondemand.com%2Flogin%2Fcallback"}
+   2024-08-23T08:10:01.27+0000 [APP/PROC/WEB/0] OUT {"written_at":"2024-08-23T08:10:01.269Z","written_ts":1724400601269000000,"csn_component":"-","correlation_id":"ee2f72b4-7bef-4827-741a-f5e92e2be845","type":"log","logger":"nodejs-logger","layer":"/Auth/OAuth2","level":"info","container_id":"10.0.137.20","component_type":"application","component_id":"4ebabed0-60c8-4e38-b3e8-a16193fa574f","component_name":"maxeda-approuter","component_instance":-1,"source_instance":-1,"organization_id":"41258d48-046b-45ca-970d-886bc64da50e","organization_name":"flexso-build-demo","space_id":"02daf1b9-f03c-4a04-86b6-06e47187b6d4","space_name":"maxeda poc","request_id":"ee2f72b4-7bef-4827-741a-f5e92e2be845","msg":"x-forwarded-path header: undefined"}
+   2024-08-23T08:10:01.27+0000 [RTR/2] OUT flexso-build-demo-maxeda-poc-maxeda-approuter.cfapps.eu10-004.hana.ondemand.com - [2024-08-23T08:10:01.089087463Z] "GET /srv_api/hello HTTP/2.0" 200 0 688 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" "10.0.200.0:61882" "10.0.137.20:61032" x_forwarded_for:"94.143.189.241, 10.0.200.0" x_forwarded_proto:"https" vcap_request_id:"ee2f72b4-7bef-4827-741a-f5e92e2be845" response_time:0.182783 gorouter_time:0.000077 app_id:"4ebabed0-60c8-4e38-b3e8-a16193fa574f" app_index:"0" instance_id:"2931514a-4cb8-42f5-4a56-ceeb" failed_attempts:0 failed_attempts_time:"-" dns_time:0.000000 dial_time:0.001709 tls_time:0.004326 backend_time:0.182706 x_cf_routererror:"-" x_correlationid:"-" tenantid:"-" sap_passport:"-" x_scp_request_id:"ce569055-48ab-4a71-8abd-74c27986dc2e-66C843D9-CC70836" x_cf_app_instance:"-" x_forwarded_host:"-" x_custom_host:"-" x_ssl_client:"-" x_ssl_client_session_id:"-" x_ssl_client_verify:"-" x_ssl_client_subject_dn:"-" x_ssl_client_subject_cn:"-" x_ssl_client_issuer_dn:"-" x_ssl_client_notbefore:"-" x_ssl_client_notafter:"-" x_cf_forwarded_url:"-" traceparent:"-" true_client_ip:"-" x_request_id:"-" x_b3_traceid:"ee2f72b47bef4827741af5e92e2be845" x_b3_spanid:"741af5e92e2be845" x_b3_parentspanid:"-" b3:"ee2f72b47bef4827741af5e92e2be845-741af5e92e2be845"

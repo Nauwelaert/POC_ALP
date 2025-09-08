@@ -1,0 +1,17 @@
+# Ignore node_modules directories globally, no matter the level
+**/node_modules/
+
+# Ignore dist directory from env project, no matter the level
+srv/dist/
+
+# Ignore specific directories
+mta_archives/
+resources/
+
+# Ignore all files in the .env/provider subfolder, recursively
+.env/provider/**
+
+# Ignore these specific files in the root and any subdirectory, no matter how deeply nested
+**/default-services.json
+# added by cds
+.cdsrc-private.json

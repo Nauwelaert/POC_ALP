@@ -1,0 +1,44 @@
+{
+  "name": "srv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && npm run build:copy",
+    "build:copy": "copyfiles ./package.json ./package-lock.json ./broker-config/**/* dist",
+    "start": "node index.js",
+    "start:dev": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^3.25.0",
+    "@sap-cloud-sdk/http-client": "^3.25.0",
+    "@sap/xsenv": "^5.4.0",
+    "@sap/xssec": "^4.2.7",
+    "axios": "^1.8.4",
+    "body-parser": "^1.20.3",
+    "cf-nodejs-logging-support": "^7.4.0",
+    "dicer": "^0.3.1",
+    "express": "^4.21.2",
+    "express-batch": "^0.2.1",
+    "fast-xml-parser": "^4.5.1",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.7.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.12.0",
+    "@types/passport": "^1.0.17",
+    "@types/xml2js": "^0.4.14",
+    "copyfiles": "2.4.1",
+    "eslint-plugin-jsdoc": "^46.9.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  }
+}

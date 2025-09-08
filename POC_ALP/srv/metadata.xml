@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Aggregation.V1.xml">
+    <edmx:Include Alias="Aggregation" Namespace="Org.OData.Aggregation.V1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Analytics.xml">
+    <edmx:Include Alias="Analytics" Namespace="com.sap.vocabularies.Analytics.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
+    <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/DataIntegration.xml">
+    <edmx:Include Alias="DataIntegration" Namespace="com.sap.vocabularies.DataIntegration.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Measures.V1.xml">
+    <edmx:Include Alias="Measures" Namespace="Org.OData.Measures.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices>
+    <Schema Namespace="InaApplicationService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EntityContainer Name="EntityContainer">
+        <EntitySet Name="Sales_Demo_Analytical_Model" EntityType="InaApplicationService.Sales_Demo_Analytical_ModelType" />
+      </EntityContainer>
+      <EntityType Name="Sales_Demo_Analytical_ModelType">
+        <Property Name="PAR_ZEROORONE" Type="Edm.Int32" Nullable="false" DefaultValue="0"/>
+        <Property Name="CALMONTH" Type="Edm.String" MaxLength="6"/>
+        <Property Name="CALQUARTER" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CALWEEK" Type="Edm.String" MaxLength="6"/>
+        <Property Name="COGS" Type="Edm.Decimal" Precision="38" Scale="24"/>
+        <Property Name="ClientId_D0" Type="Edm.String" MaxLength="5000"/>
+        <Property Name="Cost_Price" Type="Edm.Decimal" Precision="38" Scale="19"/>
+        <Property Name="CountryId_D3" Type="Edm.String" MaxLength="5000"/>
+        <Property Name="Currency" Type="Edm.String" MaxLength="3"/>
+        <Property Name="Customer_SegmentId" Type="Edm.String" MaxLength="5000"/>
+        <Property Name="Customer_StatusId" Type="Edm.String" MaxLength="5000"/>
+        <Property Name="DATE_SAP" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DAY_OF_WEEK" Type="Edm.String" MaxLength="2"/>
+        <Property Name="DateDATE_D1" Type="Edm.Date"/>
+        <Property Name="Latitude" Type="Edm.Decimal" Scale="variable"/>
+        <Property Name="Location" Type="Edm.String"/>
+        <Property Name="Longitude" Type="Edm.Decimal" Scale="variable"/>
+        <Property Name="MONTH" Type="Edm.String" MaxLength="2"/>
+        <Property Name="Order_IDId" Type="Edm.Decimal" Scale="variable"/>
+        <Property Name="Order_Value" Type="Edm.Decimal" Precision="10" Scale="5"/>
+        <Property Name="ProductId_D2" Type="Edm.String" MaxLength="5000"/>
+        <Property Name="Product_TypeId" Type="Edm.String" MaxLength="5000"/>
+        <Property Name="QUARTER" Type="Edm.String" MaxLength="2"/>
+        <Property Name="Sales_AgentId" Type="Edm.String" MaxLength="5000"/>
+        <Property Name="Sales_Prio" Type="Edm.String" MaxLength="1"/>
+        <Property Name="Unit" Type="Edm.String" MaxLength="2"/>
+        <Property Name="Units_Sold" Type="Edm.Decimal" Precision="10" Scale="5"/>
+        <Property Name="VersionVersion" Type="Edm.String" MaxLength="5000"/>
+        <Property Name="YEAR" Type="Edm.String" MaxLength="4"/>
+        <Property Name="YOUPASSED" Type="Edm.Double"/>
+        <Property Name="_Country_3" Type="Edm.String"/>
+        <Property Name="_Customer_0" Type="Edm.String"/>
+        <Property Name="_Product_2" Type="Edm.String"/>
+        <Property Name="_VIEW_DIME_1" Type="Edm.Date"/>
+        <Property Name="CALMONTH_T" Type="Edm.String" MaxLength="50"/>
+        <Property Name="CALQUARTER_T" Type="Edm.String" MaxLength="50"/>
+        <Property Name="DateDATE_D1_T" Type="Edm.Int32"/>
+        <Property Name="DAY_OF_WEEK_T" Type="Edm.String" MaxLength="50"/>
+        <NavigationProperty Name="Parameters" Type="InaApplicationService.Sales_Demo_Analytical_ModelParameters" Partner="Set"/>
+      </EntityType>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType">
+        <Annotation Term="Common.Label" String="Sales Demo Analytical Model"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/CALMONTH">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Calendar Month"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/CALQUARTER">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Calendar Quarter"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/CALWEEK">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Calendar Week"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/COGS">
+        <Annotation Term="Common.Label" String="COGS"/>
+        <Annotation Term="Analytics.measure" Bool="true"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/ClientId_D0">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="DataIntegration.OriginalName" String="ClientId∞D0"/>
+        <Annotation Term="Common.Label" String="ClientId"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Cost_Price">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="DataIntegration.OriginalName" String="Cost Price"/>
+        <Annotation Term="Common.Label" String="Cost Price"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/CountryId_D3">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="DataIntegration.OriginalName" String="CountryId∞D3"/>
+        <Annotation Term="Common.Label" String="CountryId"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Currency">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Currency"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Customer_SegmentId">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Customer_SegmentId"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Customer_StatusId">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Customer_StatusId"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/DATE_SAP">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Date (String)"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/DAY_OF_WEEK">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Day of Week"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/DateDATE_D1">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="DataIntegration.OriginalName" String="DateDATE∞D1"/>
+        <Annotation Term="Common.Label" String="DateDATE"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Latitude">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Latitude"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Location">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Location"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Longitude">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Longitude"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/MONTH">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Month"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Order_IDId">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Order_IDId"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Order_Value">
+        <Annotation Term="Common.Label" String="Revenue"/>
+        <Annotation Term="Analytics.measure" Bool="true"/>
+        <Annotation Term="Measures.ISOCurrency" Path="Currency"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/ProductId_D2">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="DataIntegration.OriginalName" String="ProductId∞D2"/>
+        <Annotation Term="Common.Label" String="ProductId"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Product_TypeId">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Product_TypeId"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/QUARTER">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Quarter"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Sales_AgentId">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Sales_AgentId"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Sales_Prio">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Sales Prio"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Unit">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Unit"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/Units_Sold">
+        <Annotation Term="Common.Label" String="Units_Sold"/>
+        <Annotation Term="Analytics.measure" Bool="true"/>
+        <Annotation Term="Measures.Unit" Path="Unit"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/VersionVersion">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="VersionVersion"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/YEAR">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="Common.Label" String="Year"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/YOUPASSED">
+        <Annotation Term="Common.Label" String="YOUPASSED..."/>
+        <Annotation Term="Analytics.measure" Bool="true"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/_Country_3">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="DataIntegration.OriginalName" String="_Country∞3"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/_Customer_0">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="DataIntegration.OriginalName" String="_Customer∞0"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/_Product_2">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="DataIntegration.OriginalName" String="_Product∞2"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/_VIEW_DIME_1">
+        <Annotation Term="Analytics.Dimension" Bool="true"/>
+        <Annotation Term="DataIntegration.OriginalName" String="_VIEW_DIME∞1"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/CALMONTH_T">
+        <Annotation Term="Analytics.navigationAttributeRef">
+          <Collection>
+            <String>_VIEW_DIME∞1</String>
+            <String>_MONTH</String>
+            <String>_DESCRIPTION</String>
+          </Collection>
+        </Annotation>
+        <Annotation Term="DataIntegration.OriginalName" String="CALMONTH∞T"/>
+        <Annotation Term="Common.Label" String="Month Name"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/CALQUARTER_T">
+        <Annotation Term="Analytics.navigationAttributeRef">
+          <Collection>
+            <String>_VIEW_DIME∞1</String>
+            <String>_QUARTER</String>
+            <String>_DESCRIPTION</String>
+          </Collection>
+        </Annotation>
+        <Annotation Term="DataIntegration.OriginalName" String="CALQUARTER∞T"/>
+        <Annotation Term="Common.Label" String="Quarter Name"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/DateDATE_D1_T">
+        <Annotation Term="Analytics.navigationAttributeRef">
+          <Collection>
+            <String>_VIEW_DIME∞1</String>
+            <String>DAY_INT</String>
+          </Collection>
+        </Annotation>
+        <Annotation Term="DataIntegration.OriginalName" String="DateDATE∞D1∞T"/>
+        <Annotation Term="Common.Label" String="SAP.TIME.VIEW_DIMENSION_DAY#DAY_INT@ENDUSERTEXT.LABEL"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelType/DAY_OF_WEEK_T">
+        <Annotation Term="Analytics.navigationAttributeRef">
+          <Collection>
+            <String>_VIEW_DIME∞1</String>
+            <String>_DAY_OF_WEEK</String>
+            <String>_DESCRIPTION</String>
+          </Collection>
+        </Annotation>
+        <Annotation Term="DataIntegration.OriginalName" String="DAY_OF_WEEK∞T"/>
+        <Annotation Term="Common.Label" String="Day Name"/>
+      </Annotations>
+      <Annotations Target="InaApplicationService.EntityContainer/Sales_Demo_Analytical_Model">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="InaApplicationService.Sales_Demo_Analytical_ModelParameters/ZEROORONE">
+        <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+      </Annotations>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

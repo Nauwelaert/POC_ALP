@@ -1,0 +1,95 @@
+_schema-version: "3.2"
+ID: datareports
+version: 0.0.1
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm run build:service
+modules:
+
+- name: srv
+  type: nodejs
+  path: srv/dist
+  requires:
+  - name: datareports_destination_service
+  - name: datareports-xsuaa-service
+  provides:
+  - name: srv_api
+    properties:
+      url: ${default-url}
+  parameters:
+    disk-quota: 512M
+    memory: 512M
+
+#Provide destinations
+- name: datareports-destination-content
+  type: com.sap.application.content
+  requires:
+    - name: datareports-xsuaa-service
+    - name: datareports_html_repo_host
+    - name: srv_api
+    - name: datareports_destination_service
+      parameters:
+        content-target: true
+  parameters:
+    content:
+      instance:
+        destinations:
+          - Name: datareports_html_repo_host
+            ServiceInstanceName: datareports_html_repo_host
+            ServiceKeyName: datareports_html_repo_host-key
+            sap.cloud.service: be.maxeda.datareports
+          - Name: datasphere_middleware
+            TokenServiceInstanceName: datareports-xsuaa-service
+            TokenServiceKeyName: datareports_uaa-key
+            sap.cloud.service: be.maxeda.datareports
+            Authentication: OAuth2UserTokenExchange
+            URL: ~{srv_api/url}
+            HTML5.Timeout: 300001 
+        existing_destinations_policy: update
+  build-parameters:
+    no-source: true
+
+
+- name: datareports_ui5_deployer
+  type: com.sap.application.content
+  path: deployer/resources
+  requires:
+    - name: datareports_html_repo_host
+      parameters:
+        content-target: true
+  build-parameters:
+    builder: custom
+    commands:
+      - npm run build:ui --prefix ../..
+
+
+resources:
+- name: datareports_html_repo_runtime
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-runtime
+- name: datareports-xsuaa-service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: datareports-xsuaa-service
+    service-plan: application
+- name: datareports_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-host
+- name: datareports_destination_service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+    service: destination
+    service-name: datareports-poc-destination-service
+    service-plan: lite
+parameters:
+  deploy_mode: html5-repo
